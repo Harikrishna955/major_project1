@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div class="mainContainer">
+        <div class="score_box">
+            <div class="score_left">
+                <p>ROCK</p>
+                <P>PAPER</P>
+                <p>SCISSSOR</p>
+            </div>
+            <div class="score_right">
+                <div class="score">
+                    <p>Computer <br> score: <br> <span id="computer_score">0</span></p>
+                </div>
+                <div class="score">
+                    <p>your <br> score: <br><span id="your_score">0</span></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="buttons">
+            <div class="rockcircle">
+                <button id="rockbutton" class="buttonOption">
+                    <span class="optionImage"><img src="rock.png" alt="image" onclick="play('rock')"></button></span>
+            </div>
+            <div class="papercircle">
+                <button id="paperbutton" class="buttonOption">
+                    <span class="optionImage"><img src="paper.png" alt="image" onclick="play('paper')"></span></button>
+            </div>
+            <div class="scissorcircle">
+                <button id="scissorbutton" class="buttonOption">
+                    <span class="optionImage"><img src="scissor.png" alt="image"
+                            onclick="play('scissor')"></span></button>
+            </div>
+        </div>
+        <section class="container">
+            <div class="result" style="display: none;">
+                <div class="result-images">
+
+                    <div class="userImage">
+
+                        <img src="rock.png" alt="image" id="playerImage" class="winner">
+                        <p id="your-pick">your pick</p>
+
+                    </div>
+                    <div>
+                        <p id="text-won" class="result-text">lets play</p>
+                        <p id="against">against pc</p>
+                        <button id="play-again" onclick="playagain()">Play Again</button>
+                        <button id="replay" style="display: none;" onclick="resetGame()">Replay</button>
+                    </div>
+
+                    <div class="computerImage">
+                        <img src="rock.png" alt="image" id="pcImage" class="winner">
+                        <p id="computer-pick">PC pick</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <div class="button-container">
+            <button id="rules" class="button">Rules</button>
+            <button id="next" class="button" style="display: none;" onclick="hurey()">Next</button>
+
+
+
+        </div>
+
+        <div id="modalBox" class="modal">
+            <div class="gameRules">
+                <span class="close">&#x2716;</span>
+                <h3>Game Rules</h3>
+                <ul>
+                    <li>Rock beats scissos,scissos beat paper, and paper beats rock</li>
+                    <li>Agree ahead of time whether you'll count off 'rock,paper,scissos,shoot' or just
+                        'rock,paper,scissos'.</li>
+                    <li>Use rock,paper,scissors to settle minor decisions or simply play to pas the time</li>
+                    <li>If both players lay dow the same hand, eacch player lays down anothe hand</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="imageContainer">
+        <img src="hurray.png" alt="">
+        <button id="replay1" onclick="resetGame()">Replay</button>
+    </div>
+    <script src="index.js">
+
+    </script>
+
+
+</body>
+
+</html>
